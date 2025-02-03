@@ -1,3 +1,8 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
 .Gamespace {
   display: flex;
   flex-direction: row;
@@ -6,16 +11,62 @@
   gap: 2em;
 }
 
-.guess_btn {
+.Titlespace {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5em;
+  margin-top: 5em;
   color: white;
-  background-color: black;
+}
+
+button {
+  color: white;
   padding: 15px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
-  border: none;
-  border-radius: 0px;
+  border: 5px solid white;
+  border-radius: 45px;
 }
 
-.guess_btn:hover {
-  background-color: #333;
+button:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+#startSpillet {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 237, 255, 1) 0%,
+    rgba(2, 31, 110, 1) 50%,
+    rgba(0, 237, 255, 1) 100%
+  );
+}
+
+#forHoejt {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 72, 72, 1) 0%,
+    rgba(121, 9, 9, 1) 50%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+#forLavt {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 72, 72, 1) 0%,
+    rgba(121, 9, 9, 1) 50%,
+    rgba(255, 0, 0, 1) 100%
+  );
+}
+
+#perfekt {
+  background: linear-gradient(
+    45deg,
+    rgba(134, 255, 32, 1) 0%,
+    rgba(9, 121, 37, 1) 50%,
+    rgba(134, 255, 32, 1) 100%
+  );
 }
