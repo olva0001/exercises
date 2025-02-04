@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  padding: 50px;
+  background-color: orange;
+  border: none;
+}
+
+img:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+img {
+  width: 300px;
+  height: auto;
+}
