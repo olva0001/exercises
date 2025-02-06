@@ -12,6 +12,43 @@ const vehicles = [
 ];
 
 
+document.querySelectorAll("button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("button").forEach((b) => b.classList.remove("active"));
+    
+    btn.classList.add("active");
+
+    filterhandler(btn.dataset.filter);
+  });
+});
+
+  
+function filterhandler(filter) {
+    console.log("filterhandler", filter);
+    let filteredArr;
+    switch (filter) {
+      case "alle":
+        filteredArr = vehicles;
+        break;
+      case "AlleElBiler":
+        filteredArr = alleElBiler;
+        break;
+      case "alleMedToSaeder":
+        filteredArr = alleMedToSaeder;
+        break;
+      case "AlleElBilerEjetAfJonas":
+        filteredArr = AlleElBilerEjetAfJonas;
+        break;
+      case "DrevetAfRugbroed":
+        filteredArr = DrevetAfRugbroed;
+        break;
+    }
+    showTheseVehicles(filteredArr);
+}
+
+
+
+
 const tbodyPointer = document.querySelector("tbody");
 
 const alleElBiler = vehicles.filter((vehicles) => vehicles.isElectric);
@@ -31,20 +68,28 @@ showTheseVehicles(vehicles);
 
 
 function showTheseVehicles(arr) {
+  tbodyPointer.innerHTML = "";
   arr.forEach((each) => {
     tbodyPointer.innerHTML += `<tr>
-  <td>${each.type}</td>
-  <td>${each.fuel}</td>
-  <td>${each.passengers}</td> 
-  <td>${each.stops}</td>
-  <td>${each.ownedBy}</td>
-  <td>${each.isElectric}</td> 
-  <td>${each.isTandem}</td>
-</tr>`;
+      <td>${beautifyStr(each.type)}</td>
+      <td>${beautifyStr(each.fuel)}</td>
+      <td>${beautifyStr(each.passengers)}</td> 
+      <td>${beautifyStr(each.stops)}</td>
+      <td>${beautifyStr(each.ownedBy)}</td>
+      <td>${beautifyStr(each.isElectric)}</td> 
+      <td>${beautifyStr(each.isTandem)}</td>
+    </tr>`;
   });
-  document.querySelectorAll("td").forEach((cell) => {
-    if (cell.innerHTML === "undefined") {
-      cell.innerHTML = "";
-    }
-  });
+}
+
+function beautifyStr(str) {
+  switch (str) {
+    case undefined:
+      str = "-";
+      break;
+    case true:
+      str = "✓";
+      break;
+  }
+  return str;
 }

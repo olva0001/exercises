@@ -1,3 +1,11 @@
+.table_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
 table {
   border-collapse: collapse;
   border: 1px solid rgb(0, 0, 0);
@@ -38,4 +46,23 @@ tfoot th {
 
 tfoot td {
   font-weight: bold;
+}
+
+button {
+  background-color: rgb(0, 157, 255);
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-family: arial;
+  font-size: 1rem;
+  font-size: large;
+}
+
+button:hover {
+  background-color: rgb(0, 100, 255);
+  scale: 1.01;
+}
+
+button.active {
+  background-color: rgb(216, 238, 255);
 }
