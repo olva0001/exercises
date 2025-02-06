@@ -13,5 +13,36 @@ const texts = {
     ],
   },
 };
-const locale = "da";
+const Dansk = "da";
+const Tysk = "de";
 
+
+document.addEventListener("DOMContentLoaded", visDansk);
+
+
+function switchLanguage(lang) {
+  let text = texts[lang];
+  switch (lang) {
+    case "de":
+      text.texts.forEach((element) => {
+        document.querySelector(element.location).textContent = element.text;
+      });
+      break;
+    case "da":
+      text.texts.forEach((element) => {
+        document.querySelector(element.location).textContent = element.text;
+      });
+      break;
+  }
+}
+
+document.querySelector(".dansk").addEventListener("click", visDansk);
+document.querySelector(".tysk").addEventListener("click", visTysk);
+
+function visDansk() {
+  switchLanguage(Dansk);
+}
+
+function visTysk() {  
+  switchLanguage(Tysk);
+}
