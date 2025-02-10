@@ -18,9 +18,37 @@ body[data-theme="light"] {
 
 body[data-theme="hawaii"] {
   --header-bg-col: #ffd000;
-  --main-bg-col: #51ff00;
-  --footer-bg-col: #00eeff;
+  --main-bg-col: #7aff4d;
+  --footer-bg-col: #ffff00;
   --text-color: #333;
+}
+
+body[data-theme="red"] {
+  --header-bg-col: #ff0000;
+  --main-bg-col: #ff0000;
+  --footer-bg-col: #ff0000;
+  --text-color: #fff;
+}
+
+body[data-theme="jungle"] {
+  --header-bg-col: #764100;
+  --main-bg-col: #1d8624;
+  --footer-bg-col: #012b05;
+  --text-color: #fff;
+}
+
+body[data-theme="underwater"] {
+  --header-bg-col: #0000ff;
+  --main-bg-col: #00ffff;
+  --footer-bg-col: #0000ff;
+  --text-color: #000000;
+}
+
+body[data-theme="halloween"] {
+  --header-bg-col: #ff6600;
+  --main-bg-col: #000000;
+  --footer-bg-col: #ff6600;
+  --text-color: #fff;
 }
 
 header {
