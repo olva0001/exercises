@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body[data-theme="dark"] {
+  --header-bg-col: #000000;
+  --main-bg-col: #200b46;
+  --footer-bg-col: #000000;
+  --text-color: #fff;
+}
+
+body[data-theme="light"] {
+  --header-bg-col: #95f8ff;
+  --main-bg-col: #fff;
+  --footer-bg-col: #95f8ff;
+  --text-color: #000000;
+}
+
+body[data-theme="hawaii"] {
+  --header-bg-col: #ffd000;
+  --main-bg-col: #51ff00;
+  --footer-bg-col: #00eeff;
+  --text-color: #333;
+}
+
+header {
+  background-color: var(--header-bg-col);
+  color: var(--text-color);
+  height: 20vh;
+  text-align: left;
+}
+
+main {
+  background-color: var(--main-bg-col);
+  color: var(--text-color);
+  height: 50vh;
+  padding-left: 100px;
+}
+
+footer {
+  background-color: var(--footer-bg-col);
+  color: var(--text-color);
+  height: 20vh;
+  text-align: center;
+}
+
+.dropdown {
+  margin-left: 1250px;
+}
+
+label {
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+select {
+  border: none;
+  padding: 10px;
+}
+
+h2 {
+  padding-top: 20px;
+}
+
+h1 {
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+p {
+  padding-top: 15px;
+}
+
+ul li {
+  padding: 20px;
+}
