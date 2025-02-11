@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  background-color: rgb(61, 61, 116);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: rgb(86, 86, 161);
+  scale: 1.05;
+}
+
+td {
+  padding: 8px;
+  border: 1px solid black;
+  width: 100px;
+}
+
+tr {
+  text-align: left;
+}
