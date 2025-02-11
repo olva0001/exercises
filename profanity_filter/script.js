@@ -4,8 +4,6 @@ document.getElementById("SFW").addEventListener("click", MakeTextSafeForWork);
 
 let wordsReplaced = false;
 
-document.getElementById("SFW").addEventListener("click", MakeTextSafeForWork);
-
 function MakeTextSafeForWork() {
     let textElement = document.getElementById("text-content");
     let originalText = textElement.textContent;
