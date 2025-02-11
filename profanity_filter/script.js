@@ -6,7 +6,7 @@ let wordsReplaced = false;
 
 function MakeTextSafeForWork() {
     let textElement = document.getElementById("text-content");
-    let originalText = textElement.textContent;
+    let originalText = textElement.innerHTML;
     let modifiedText = originalText;
 
     if (!wordsReplaced) {
