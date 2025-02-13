@@ -1,0 +1,78 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: arial;
+  background: linear-gradient(
+    315deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(59, 77, 128, 1) 100%
+  );
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  transition: background-color 1s linear;
+  z-index: -1;
+}
+
+.blackScreen {
+  background-color: black;
+}
+
+.blackScreen::before {
+  background-color: black;
+}
+
+.noDisplay {
+  display: none;
+  visibility: hidden;
+}
+
+button {
+  border: 3px solid rgb(255, 255, 255);
+  background: none;
+  color: rgb(255, 255, 255);
+  padding: 20px 100px;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 1000px;
+  margin-top: 600px;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(79, 79, 79), rgb(79, 79, 79));
+  transition: width 8s linear;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+button.loaded::before {
+  width: 100%;
+}
+
+button span {
+  position: relative; /* Ensure text stays above */
+  z-index: 1;
+}
+
+button:hover {
+  scale: 1.1;
+}
