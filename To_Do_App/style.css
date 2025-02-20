@@ -1,15 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
 body {
   background: linear-gradient(
     315deg,
-    rgb(108, 6, 6) 0%,
+    rgb(24, 153, 69) 0%,
     rgba(59, 77, 128, 1) 100%
   );
   min-height: 100vh;
@@ -19,11 +18,11 @@ body {
 }
 
 .container {
-  background: #000000;
+  background: #201f1f;
   padding: 25px;
   width: 550px;
   border-radius: 10px;
-  box-shadow: 10px 10px 5px 0px rgba(78, 5, 5, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(9, 89, 33, 0.75);
 }
 
 .todo-title {
@@ -57,15 +56,15 @@ body {
 .add_task_btn {
   cursor: pointer;
   border-radius: 30px;
-  height: 55px;
-  width: 55px;
-  margin-right: 2px;
+  height: 48px;
+  width: 48px;
+  margin-right: 3px;
   font-size: 30px;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  background-color: #201f1f;
   border: none;
 }
 
@@ -84,7 +83,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #202020;
+  background: #2b2b2b;
   color: white;
   margin-bottom: 10px;
   border-radius: 5px;

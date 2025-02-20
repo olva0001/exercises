@@ -129,7 +129,7 @@ function UpdateOnSelectionItems() {
 
 
 
-  function DeleteToDoItems(e) {
+function DeleteToDoItems(e) {
     let itemText = e.parentElement.parentElement.querySelector("div").innerText.trim();
     
     todo = todo.filter(item => item.item !== itemText);
@@ -170,3 +170,5 @@ function setAlertMessage(message) {
         todoAlert.innerText = ""; 
     }, 5000);
   }
+
+
