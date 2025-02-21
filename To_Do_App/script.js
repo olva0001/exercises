@@ -87,7 +87,7 @@ ReadToDoItems();
         todoValue.value = itemDiv.innerText.trim(); // Fill the input with item text
         editingIndex = Array.from(e.closest('ul').children).indexOf(e.closest('li')); // Get the index of the item
         addUpdate.setAttribute("onclick", "UpdateOnSelectionItems()"); // Change button to update mode
-        addUpdate.innerText = "Update"; // Change button text to "Update"
+        addUpdate.innerText = "/"; // Change button text to "Update"
         todoValue.focus(); // Focus input field for edit
     }
 }
