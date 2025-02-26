@@ -7,17 +7,16 @@ body {
   height: 100vh;
   background: conic-gradient(
     from 180deg,
-    #2f3640 0%,
-    /* Dark slate gray */ #34495e 5%,
-    /* Lightened dark blue-gray */ #6a8fbe 25%,
-    /* Lighter deep steel blue */ #91a6c7 45%,
-    /* Soft pastel dusty blue */ #aabfd6 55%,
-    /* Pale light slate gray */ #c5d5e3 65%,
-    /* Very light soft blue-gray */ #dae4ef 75%,
-    /* Almost white bluish gray */ #e8eff5 85%,
-    /* Light gray */ #f4f6f7 95%,
-    /* Very light gray */ #ffffff 100% /* White */
+    #003459 0%,
+    /* Dark blue */ #007ea7 25%,
+    /* Medium blue */ #00a8e8 45%,
+    /* Bright cyan */ #66c6f3 55%,
+    /* Soft light cyan */ #b3e0f4 65%,
+    /* Very light blue */ #e1f5fe 75%,
+    /* Pale blue */ #f4f6f7 85%,
+    /* Light gray */ #ffffff 100% /* White */
   );
+
   background-position: 70% 61%;
   background-size: 200% 200%;
   overflow: hidden;
@@ -79,7 +78,7 @@ li {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
