@@ -1,0 +1,11 @@
+body {
+  background-color: black;
+}
+
+.title_container {
+  padding: 3rem;
+}
+
+.title_image {
+  width: 60%;
+}
