@@ -47,7 +47,7 @@ body {
 
 .text_field {
   grid-column: 2 / 3;
-  width: 50vw;
+  width: 55vw;
   height: 60vh;
   /* border: 1px solid red; */
   margin-top: 10px;
@@ -209,4 +209,8 @@ li:hover {
 
 #figma {
   width: 3.2rem;
+}
+
+.Om_mig p {
+  line-height: 2rem;
 }
