@@ -12,13 +12,13 @@ body {
   background: conic-gradient(
     from 180deg,
     #003459 0%,
-    /* Dark blue */ #007ea7 25%,
-    /* Medium blue */ #00a8e8 45%,
-    /* Bright cyan */ #66c6f3 55%,
-    /* Soft light cyan */ #b3e0f4 65%,
-    /* Very light blue */ #e1f5fe 75%,
-    /* Pale blue */ #f4f6f7 85%,
-    /* Light gray */ #ffffff 100% /* White */
+    #007ea7 25%,
+    #00a8e8 45%,
+    #66c6f3 55%,
+    #b3e0f4 65%,
+    #e1f5fe 75%,
+    #f4f6f7 85%,
+    #ffffff 100%
   );
   background-position: 70% 61%;
   background-size: 200% 200%;
@@ -42,7 +42,6 @@ body {
   width: 400px;
   height: 60vh;
   /* border: 1px solid red; */
-  margin-top: 10px;
 }
 
 .text_field {
@@ -116,6 +115,33 @@ li:hover {
 #linkedin {
   width: 5%;
   height: 100%;
+}
+
+.projekt_box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 1rem;
+  color: black;
+  margin-top: 1.5rem;
+}
+
+.projekt_box img {
+  width: 8%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.projekt_box p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.projekt_box a {
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
 }
 
 .CV {
