@@ -119,11 +119,19 @@ li:hover {
 
 .projekt_box {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  width: fit-content;
   gap: 1rem;
-  color: black;
+  align-items: center;
   margin-top: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.projekt_box a {
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
 }
 
 .projekt_box img {
@@ -138,10 +146,14 @@ li:hover {
   font-weight: 300;
 }
 
-.projekt_box a {
+a .projekt_box {
+  display: flex;
+  width: fit-content;
+}
+
+a {
   text-decoration: none;
-  list-style-type: none;
-  color: black;
+  color: inherit;
 }
 
 .CV {
