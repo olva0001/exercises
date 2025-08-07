@@ -19,6 +19,22 @@ window.onload = function () {
     }, 5000);
   }
 
+  window.IncrementCount = function (btn) {
+  const taskDiv = btn.closest("div");
+  const textEl = taskDiv.querySelector(".task-text");
+  const fullText = textEl.innerText.trim();
+  const itemText = fullText.replace(/\s\d+x$/, "");
+
+  const index = todo.findIndex(el => el.item === itemText);
+
+  if (index !== -1) {
+    todo[index].count = (todo[index].count || 1) + 1;
+    setLocalStorage();
+    ReadToDoItems();
+  }
+};
+
+
   function ReadToDoItems() {
     listItems.innerHTML = "";
     completedItems.innerHTML = "";
@@ -26,14 +42,16 @@ window.onload = function () {
     todo.forEach((element) => {
       let li = document.createElement("li");
       const taskHTML = `
-        <div title="Hit Double Click and Complete" ondblclick="CompletedToDoItems(this)">
-          ${element.item}
-        </div>
-        <div>
-          ${!element.status ? '<button class="edit todo-controls" onclick="UpdateToDoItems(this)">Edit</button>' : ''}
-          <button class="delete todo-controls" onclick="DeleteToDoItems(this)">Delete</button>
-        </div>
-      `;
+  <div title="Hit Double Click and Complete" ondblclick="CompletedToDoItems(this)">
+    <button class="increment-btn" onclick="IncrementCount(this)">+</button>
+    <span class="task-text">${element.item} ${element.count || 1}x</span>
+  </div>
+  <div>
+    ${!element.status ? '<button class="edit todo-controls" onclick="UpdateToDoItems(this)">Edit</button>' : ''}
+    <button class="delete todo-controls" onclick="DeleteToDoItems(this)">Delete</button>
+  </div>
+`;
+
       li.innerHTML = taskHTML;
 
       if (element.status) {
@@ -61,7 +79,7 @@ window.onload = function () {
       return;
     }
 
-    todo.push({ item: newItem, status: false });
+    todo.push({ item: newItem, status: false, count: 1 });
     setLocalStorage();
     ReadToDoItems();
 
@@ -71,7 +89,7 @@ window.onload = function () {
 
   window.UpdateToDoItems = function (e) {
     const itemDiv = e.parentElement.parentElement.querySelector("div");
-    const itemText = itemDiv.innerText.trim();
+    const itemText = itemDiv.querySelector(".task-text").innerText.trim().replace(/\s\d+x$/, "");
     const index = todo.findIndex((el) => el.item === itemText);
 
     if (index !== -1 && !todo[index].status) {
@@ -113,7 +131,7 @@ window.onload = function () {
   };
 
   window.DeleteToDoItems = function (e) {
-    const itemText = e.parentElement.parentElement.querySelector("div").innerText.trim();
+    const itemText = e.parentElement.parentElement.querySelector(".task-text").innerText.trim().replace(/\s\d+x$/, "");
     const index = todo.findIndex((item) => item.item === itemText);
     if (index !== -1) {
       todo.splice(index, 1);
@@ -124,7 +142,8 @@ window.onload = function () {
 
   window.CompletedToDoItems = function (e) {
     const itemDiv = e.parentElement.querySelector("div");
-    const itemText = itemDiv.innerText.trim();
+    const itemText = itemDiv.querySelector(".task-text").innerText.trim().replace(/\s\d+x$/, "");
+
 
     const index = todo.findIndex((item) => item.item === itemText);
     if (index !== -1) {
