@@ -42,15 +42,15 @@ window.onload = function () {
     todo.forEach((element) => {
       let li = document.createElement("li");
       const taskHTML = `
-  <div title="Hit Double Click and Complete" ondblclick="CompletedToDoItems(this)">
-    <button class="increment-btn" onclick="IncrementCount(this)">+</button>
-    <span class="task-text">${element.item} ${element.count || 1}x</span>
-  </div>
-  <div>
-    ${!element.status ? '<button class="edit todo-controls" onclick="UpdateToDoItems(this)">Edit</button>' : ''}
-    <button class="delete todo-controls" onclick="DeleteToDoItems(this)">Delete</button>
-  </div>
-`;
+        <div title="Hit Double Click and Complete" ondblclick="CompletedToDoItems(this)">
+            <button class="increment-btn" onclick="IncrementCount(this)">+</button>
+            <span class="task-text">${element.item} ${element.count || 1}x</span>
+        </div>
+        <div>
+            ${!element.status ? '<button class="edit todo-controls" onclick="UpdateToDoItems(this)">Edit</button>' : ''}
+            <button class="delete todo-controls" onclick="DeleteToDoItems(this)">Delete</button>
+        </div>
+        `;
 
       li.innerHTML = taskHTML;
 
